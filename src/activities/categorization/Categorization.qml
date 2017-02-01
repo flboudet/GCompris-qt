@@ -36,6 +36,8 @@ ActivityBase {
 
     property string boardsUrl: "qrc:/gcompris/src/activities/categorization/resource/"
     property bool vert: background.width < background.height
+    property string type: "images"
+    property var categoriesCount
 
     pageComponent: Image {
         id: background
@@ -71,11 +73,10 @@ ActivityBase {
             property bool displayUpdateDialogAtStart: true
             property var details
             property alias file: file
-            property var categoriesCount
         }
 
         onStart: {
-            Activity.init(items, boardsUrl)
+            Activity.init(items, boardsUrl,type,categoriesCount)
             dialogActivityConfig.getInitialConfiguration()
             Activity.start()
         }

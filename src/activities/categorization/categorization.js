@@ -39,21 +39,25 @@ var boardsUrl
 var answerTable = {}
 var totalImages
 var fileName = ":/gcompris/data/words/animals/camel.jpg"
+var type
+var categoriesCount
 
-function init(items_,boardsUrl_) {
+function init(items_,boardsUrl_,type_,categoriesCount_) {
     boardsUrl = boardsUrl_
     items = items_
+    type = type_
+    categoriesCount = categoriesCount_
     items.menuModel.clear()
     currentSubLevel = 0
-    items.categoriesCount = items.file.exists(fileName) ? 18 : 6
+    categoriesCount = items.file.exists(fileName) ? 1 : 1
 }
 
 function start() {
     categoriesData = []
     items.categoryReview.stop()
     var categoriesFilename;
-    for(var i = 1; i <= items.categoriesCount; i++) {
-        categoriesFilename = boardsUrl + "board" + "/" + "category" + i + ".qml"
+    for(var i = 1; i <= categoriesCount; i++) {
+        categoriesFilename = type == "images" ? boardsUrl + "board" + "/" + "category" + i + ".qml" : boardsUrl + "categ-en" +"/" + "category" + i + ".qml"
         items.categoryReview.categoryDataset.source = categoriesFilename
         categoriesData.push(items.categoryReview.categoryDataset.item)
     }
