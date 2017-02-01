@@ -49,7 +49,7 @@ function init(items_,boardsUrl_,type_,categoriesCount_) {
     categoriesCount = categoriesCount_
     items.menuModel.clear()
     currentSubLevel = 0
-    categoriesCount = items.file.exists(fileName) ? 1 : 1
+    categoriesCount = (items.file.exists(fileName) && type == "images") ? 18 : (type == "words" ? categoriesCount : 6)
 }
 
 function start() {
