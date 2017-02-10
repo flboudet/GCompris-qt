@@ -29,6 +29,6 @@ Categorization {
     onStart: focus = true
     onStop: {}
     boardsUrl: "qrc:/gcompris/src/activities/categorization_words/resource/board/"
-    categoriesCount: 1
+    categoriesCount: 4
     type: "words"
 }

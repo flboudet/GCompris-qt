@@ -56,6 +56,8 @@ function start() {
     categoriesData = []
     items.categoryReview.stop()
     var categoriesFilename;
+    var locale = items.locale == "system" ? "$LOCALE" : items.locale
+    print("locale",locale)
     for(var i = 1; i <= categoriesCount; i++) {
         categoriesFilename = type == "images" ? boardsUrl + "board" + "/" + "category" + i + ".qml" : boardsUrl + "categ-en" +"/" + "category" + i + ".qml"
         items.categoryReview.categoryDataset.source = categoriesFilename
@@ -95,6 +97,7 @@ function categoriesToSavedProperties() {
 // Update the categories based on a previous saving
 function savedPropertiesToCategories(dataToSave) {
     var props = dataToSave["data"]
+    print(dataToSave["locale"])
     for(var i = 0; i < items.menuModel.count; i++) {
         var category = items.menuModel.get(i)
         var categoryname = category.name

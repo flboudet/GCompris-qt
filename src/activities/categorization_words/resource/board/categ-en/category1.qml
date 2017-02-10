@@ -39,21 +39,21 @@ QtObject {
                 },
                 {
                     "instructions": qsTr("Place the PRESENT CONTINUOUS WORDS to the right and others to the left"),
-                    "image": "Past Tense",
+                    "image": "Present Continuous Tense",
                     "maxNumberOfGood": 6,
                     "maxNumberOfBad": 6,
                     "prefix": "",
-                    "good": ["going","playing","doing","loving","eating","sinking"],
-                    "bad": ["among","live","see","saw","miss","draw"]
+                    "good": ["I am going","He is playing","She is riding","I am loving","They are eating","He is sinking"],
+                    "bad": ["among","I live","We see","He saw","miss","She draws"]
                 },
                 {
                     "instructions": qsTr("Place the PRESENT PERFECT WORDS to the right and others to the left"),
-                    "image": "Past Tense",
+                    "image": "Present Perfect Tense",
                     "maxNumberOfGood": 6,
                     "maxNumberOfBad": 6,
                     "prefix": "",
-                    "good": ["has gone","has eaten","has done","have eaten","has shown","has slept"],
-                    "bad": ["studying","between","sit","stand","dreaming","above"]
+                    "good": ["He has gone","She has eaten","He has done","I have eaten","He has shown","He has slept"],
+                    "bad": ["I studying","between","He sits","stand","I am dreaming","above"]
                 },
                 {
                     "instructions": qsTr("Place the PAST TENSE WORDS to the right and others to the left"),
@@ -61,16 +61,16 @@ QtObject {
                     "maxNumberOfGood": 6,
                     "maxNumberOfBad": 6,
                     "prefix": "",
-                    "good": ["went","played","did","run","loved","drank"],
-                    "bad": ["under","play","go","love","on","and"]
+                    "good": ["He went","I played","I did","He runs","I loved","She drank"],
+                    "bad": ["under","I play","go","He loves","on","and"]
                 },
                 {
                     "instructions": qsTr("Place the PAST CONTINUOUS WORDS to the right and others to the left"),
-                    "image": "Past Tense",
+                    "image": "Past Continuous Tense",
                     "maxNumberOfGood": 6,
                     "maxNumberOfBad": 6,
                     "prefix": "",
-                    "good": ["were going","were playing","was doing","was running","was drinking","was eating"],
+                    "good": ["We were going","I was playing","He was doing","He was running","I was drinking","I was eating"],
                     "bad": ["roam","fix","brought","washed","wash","sell"]
                 }
             ]
