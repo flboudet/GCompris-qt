@@ -46,7 +46,7 @@ ActivityBase {
         sourceSize.width: parent.width
         signal start
         signal stop
-        
+
         property string locale: "system"
 
         property bool englishFallback: false
@@ -118,7 +118,7 @@ ActivityBase {
                     property alias mediumModeBox: mediumModeBox
                     property alias expertModeBox: expertModeBox
                     property alias localeBox: localeBox
-                    
+
                     property alias availableLangs: langs.languages
                     LanguageList {
                         id: langs
@@ -165,7 +165,7 @@ ActivityBase {
                             }
                         }
                     }
-                    
+
                     GCComboBox {
                         id: localeBox
                         model: langs.languages
@@ -271,7 +271,7 @@ ActivityBase {
             active: background.categoriesFallback && items.displayUpdateDialogAtStart
             onStatusChanged: if (status == Loader.Ready) item.start()
         }
-        
+
         Loader {
             id: englishFallbackDialog
             sourceComponent: GCDialog {

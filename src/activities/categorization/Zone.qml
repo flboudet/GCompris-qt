@@ -46,7 +46,7 @@ Flow {
             Rectangle {
                 id: wordBox
                 color: "black"
-                visible: type =="words" ? 1 : 0
+                visible: type =="words" ? true : false
                 width: middleScreen.width*0.28
                 height: categoryBackground.height * 0.15
                 z: 3
@@ -79,7 +79,7 @@ Flow {
                 width: middleScreen.width*0.28
                 height: categoryBackground.height * 0.15
                 source: (type == "images") ? name : ''
-                visible: type =="words" ? 0 : 1
+                visible: type =="words" ? false : true
                 DragList {
                     id: imageDrag
                     anchors.fill: parent

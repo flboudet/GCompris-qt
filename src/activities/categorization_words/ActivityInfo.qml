@@ -21,14 +21,14 @@ ActivityInfo {
   name: "categorization_words/Categorization_words.qml"
   difficulty: 1
   icon: "categorization_words/categorization_words.svg"
-  author: "Your Name &lt;yy@zz.org&gt;"
+  author: "Divyam Madaan &lt;divyam3897@gmail.com&gt;"
   demo: true
-  title: "Categorization_words activity"
-  description: ""
+  title: qsTr("Categorization_words activity")
+  description: qsTr("Categorize the elements into correct and incorrect groups")
   //intro: "put here in comment the text for the intro voice"
-  goal: ""
-  prerequisite: ""
-  manual: ""
+  goal: qsTr("Build conceptual thinking and enrich knowledge")
+  prerequisite: qsTr("Can drag elements using mouse")
+  manual: qsTr("Review the instructions and then drag and drop the elements as specified")
   credit: ""
   section: "fun"
   createdInVersion: 8000
