@@ -28,6 +28,7 @@ Flow {
     id: zoneFlow
     width: parent.width/3
     height: parent.height
+    spacing: 5
     property alias repeater: repeater
     property alias model: zoneModel
 
@@ -40,15 +41,15 @@ Flow {
         model: zoneModel
         Item {
             id: item
-            width: middleScreen.width*0.32
-            height: categoryBackground.height * 0.2
+            width: type == "words" ? middleScreen.width * 0.92 : middleScreen.width * 0.32
+            height: type == "words" ? categoryBackground.height * 0.1 : categoryBackground.height * 0.2
             opacity: 1
             Rectangle {
                 id: wordBox
                 color: "black"
                 visible: type =="words" ? true : false
-                width: middleScreen.width*0.28
-                height: categoryBackground.height * 0.15
+                width: parent.width
+                height: parent.height
                 z: 3
                 radius: 10
                 border.width: 2
@@ -88,4 +89,3 @@ Flow {
         }
     }
 }
-

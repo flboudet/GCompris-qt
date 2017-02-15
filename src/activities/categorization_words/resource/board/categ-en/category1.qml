@@ -1,4 +1,3 @@
-
 /* GCompris
  *
  * Copyright (C) 2016 Divyam Madaan <divyam3897@gmail.com>
@@ -31,11 +30,11 @@ QtObject {
                 {
                     "instructions": qsTr("Place the PRESENT TENSE WORDS to the right and others to the left"),
                     "image": "Present Tense",
-                    "maxNumberOfGood": 6,
-                    "maxNumberOfBad": 6,
+                    "maxNumberOfGood": 4,
+                    "maxNumberOfBad": 3,
                     "prefix": "",
-                    "good": ["I go","He plays","I study","We write","They swim","He runs"],
-                    "bad": ["under","I played","we went","They loved","on","and"]
+                    "good": ["I go","He plays","I study","We write"],
+                    "bad": ["under","I played","we went"]
                 },
                 {
                     "instructions": qsTr("Place the PRESENT CONTINUOUS WORDS to the right and others to the left"),
