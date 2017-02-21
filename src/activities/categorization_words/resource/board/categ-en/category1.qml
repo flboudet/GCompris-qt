@@ -26,15 +26,34 @@ QtObject {
         {
             "name": qsTr("Tenses"),
             "image": imagesPrefix + "alphabets.jpg",
+            "categoryLesson": qsTr("Hello"),
             "content": [
                 {
-                    "instructions": qsTr("Place the PRESENT TENSE WORDS to the right and others to the left"),
+                    "instructions": qsTr("Place the SIMPLE PRESENT TENSE to the right and others to the left"),
                     "image": "Present Tense",
-                    "maxNumberOfGood": 4,
+                    "maxNumberOfGood": 5,
+                    "maxNumberOfBad": 7,
+                    "prefix": "",
+                    "good": ["I wake up.","We play basketball.","The cinema closes at 7pm.","We take a taxi to work.","He gets up early on Mondays."],
+                    "bad": ["He woke up.","I am going.","George was studying.","They went to the party","I am  not playing","We did our homework.","He is learning French."]
+                }, 
+                {
+                    "instructions": qsTr("Place the SIMPLE PRESENT TENSE to the right and others to the left"),
+                    "image": "Present Tense",
+                    "maxNumberOfGood": 5,
+                    "maxNumberOfBad": 4,
+                    "prefix": "",
+                    "good": ["I like pizza.","When do you wake up?","She lives in India.","I don't believe in witches.","We go for swimming everyday."],
+                    "bad": ["She bought a new dress.","We went to the church.","Jim completed my work.","It is raining."]
+                },  
+                {
+                    "instructions": qsTr("Place the SIMPLE PRESENT TENSE to the right and others to the left"),
+                    "image": "Present Tense",
+                    "maxNumberOfGood": 3,
                     "maxNumberOfBad": 3,
                     "prefix": "",
-                    "good": ["I go","He plays","I study","We write"],
-                    "bad": ["under","I played","we went"]
+                    "good": ["I wake up.","We play basketball.","The cinema closes at 7pm."],
+                    "bad": ["He woke up.","I am going.","George was studying.","They went to the party"]
                 },
                 {
                     "instructions": qsTr("Place the PRESENT CONTINUOUS WORDS to the right and others to the left"),

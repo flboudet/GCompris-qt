@@ -25,6 +25,37 @@ QtObject {
     property variant levels: [
         {
             "name": qsTr("Pronouns"),
+            "categoryLesson": qsTr("A <b>pronoun</b> is a word which replaces other words to avoid repetition
+We can class them in different categories.<br>
+<b>1. Personal pronouns:</b> A personnal pronoun is a word which replaces a person or an object.<br>
+<b>Examples:</b><font color=\"#3bb0de\"> I</font> go to swim: In this sentence I replaces my self.<br>
+<font color=\"#3bb0de\">He</font> is intelligent: In this example He replaces a boy or a man adult.
+<br><font color=\"#3bb0de\">They</font> are tired: In this example they replaces several people.<br><b>
+2. Reflexive Pronouns:</b> A reflexive pronoun is used when the object of a sentence is the same as the subject.
+<br><b>Examples: </b>They cooked <font color=\"#3bb0de\"> themselves</font>. In this example themselves is a reflexive pronoun.<br>
+We did the job <font color=\"#3bb0de\"> ourselves</font>: In this example ourselves is a reflexive pronoun.<br>
+I bought the fruits <font color=\"#3bb0de\"> myself</font>: In this example myself is a reflexive pronoun.<br>
+3. <b>Possesive pronouns: </b>A possesive pronoun is a little word used to indicate possesion.<br>
+<b>Examples: </b>This book is <font color=\"#3bb0de\"> mine</font>: In this example mine indicates possesion to me.<br>
+Is this ball <font color=\"#3bb0de\"> yours</font>? : In this example yours is a possesive pronoun.<br>
+He lost <font color=\"#3bb0de\"> his</font> pen: In this example his is a possesive pronoun.<br>
+<b>4. Demonstrative pronouns: </b>A demonstrative pronoun points somebody or something in a phrase and replaces it.<br>
+<b>Examples:</b><font color=\"#3bb0de\"> This</font> is my book: In this example this is a demonstrative pronoun.<br>
+I ate <font color=\"#3bb0de\"> those</font> apples. In this example those is a demonstrative pronoun.<br>
+<font color=\"#3bb0de\"> That</font> place is far away. In this example that is a demonstrative pronoun.<br>
+<b>5. Indefinite Pronouns: </b>A indefinite pronoun refers to non-specific beings, objects, or places.<br>
+<b>Examples: </b><font color=\"#3bb0de\"> Everyone</font> was late. In this example everyone is an indefinite pronoun.<br>
+<font color=\"#3bb0de\">Someone</font> stole my pen. In this example someone is an indefinite pronoun.<br>
+<font color=\"#3bb0de\">Either</font> will do. In this example either is an indefinite pronoun.<br>
+<b>6. Relative pronouns: </b>A relative pronoun is used to connect a relative clause to the main clause in a sentence.<br>
+<b>Examples: </b>I ate the fruits <font color=\"#3bb0de\">that</font> I bought yesterday. In this example that is a relative pronoun.<br>
+I am looking for someone <font color=\"#3bb0de\">who</font> can help me. In this example who is a relative pronoun.
+This is the park <font color=\"#3bb0de\">where</font> they will come. In this example where is a relative pronoun.<br>
+<b>7.Interrogative pronoun:</b> A interrogative pronoun is a word which is used to ask a question.<br>
+<b>Examples: </b><font color=\"#3bb0de\">Whose</font> eraser is this. In this example whose is an interrogative pronoun.<br>
+<font color=\"#3bb0de\">Which</font> your favorite team. In this example which is used to ask a question.<br>
+<font color=\"#3bb0de\">Where</font> were you? In this example where is used to ask a question."
+            ),
             "image": imagesPrefix + "alphabets.jpg",
             "content": [
                 {
@@ -33,8 +64,8 @@ QtObject {
                     "maxNumberOfGood": 6,
                     "maxNumberOfBad": 6,
                     "prefix": "",
-                    "good": ["I study maths.","We play football","Its raining.","They speak English.","She is eating.","You were sleeping."],
-                    "bad": ["Who was reading?","Daniel was playing.","George went outside.","Do it yourself.","The blue car.","Some milk is left."]
+                    "good": ["<font color=\"#3bb0de\">I</font> study maths.","<font color=\"#3bb0de\">We</font> play football","<font color=\"#3bb0de\">Its</font> raining.","<font color=\"#3bb0de\">They</font> speak English.","<font color=\"#3bb0de\">She</font> is eating.","<font color=\"#3bb0de\">You</font> were sleeping."],
+                    "bad": ["<font color=\"#3bb0de\">Who</font> was reading?","<font color=\"#3bb0de\">Daniel</font> was playing.","<font color=\"#3bb0de\">George</font> went outside.","Do it <font color=\"#3bb0de\">yourself</font>.","The <font color=\"#3bb0de\">blue</font> car.","Some <font color=\"#3bb0de\">milk</font> is left."]
                 },
                 {
                     "instructions": qsTr("Place the PERSONAL PRONOUNS to the right and others to the left"),
@@ -42,8 +73,8 @@ QtObject {
                     "maxNumberOfGood": 5,
                     "maxNumberOfBad": 4,
                     "prefix": "",
-                    "good": ["It's getting late.","He loves football","I am writing.","We were laughing.","They didn't play."],
-                    "bad": ["Whose pen is it?","John went.","The door was open.","Who went to school yesterday?"]
+                    "good": ["<font color=\"#3bb0de\">It's</font> getting late.","<font color=\"#3bb0de\">He</font> loves football","<font color=\"#3bb0de\">I</font> am writing.","<font color=\"#3bb0de\">We</font> were laughing.","<font color=\"#3bb0de\">They</font> didn't play."],
+                    "bad": ["<font color=\"#3bb0de\">Whose</font> pen is it?","<font color=\"#3bb0de\">John</font> went.","The <font color=\"#3bb0de\">door</font> was open.","Who <font color=\"#3bb0de\">went</font> to school yesterday?"]
                 },
                 {
                     "instructions": qsTr("Place the PERSONAL PRONOUNS to the right and others to the left"),
@@ -51,8 +82,8 @@ QtObject {
                     "maxNumberOfGood": 3,
                     "maxNumberOfBad": 3,
                     "prefix": "",
-                    "good": ["It's snowing","Do you need help?","Have you seem him today?"],
-                    "bad": ["When is the meeting?","His work was complete.","Where's the pencil"]
+                    "good": ["<font color=\"#3bb0de\">It's</font> snowing","Do <font color=\"#3bb0de\">you</font> need help?","Have <font color=\"#3bb0de\">you</font> seen him today?"],
+                    "bad": ["<font color=\"#3bb0de\">When</font> is the meeting?","His <font color=\"#3bb0de\">work</font> was complete.","<font color=\"#3bb0de\">Where's</font> the pencil"]
                 },
                 {
                     "instructions": qsTr("Place the REFLEXIVE PRONOUNS to the right and others to the left"),
@@ -60,8 +91,8 @@ QtObject {
                     "maxNumberOfGood": 6,
                     "maxNumberOfBad": 6,
                     "prefix": "",
-                    "good": ["She did the work herself","Can you talk to him yourself?","The door opened itself","I made the food myself","You should do your work yourself","I saw myself in the mirror."],
-                    "bad": ["Who cooked the food?","They were laughing.","John played.","I read a book.","She bought fruits.","A wondeful old clock."]
+                    "good": ["She did the work <font color=\"#3bb0de\">herself</font>","Can you talk to him <font color=\"#3bb0de\">yourself</font>?","The door opened <font color=\"#3bb0de\">itself</font>","I made the food <font color=\"#3bb0de\">myself</font>","You should do your work <font color=\"#3bb0de\">yourself</font>","I saw <font color=\"#3bb0de\">myself</font> in the mirror."],
+                    "bad": ["<font color=\"#3bb0de\">Who</font> cooked the food?","<font color=\"#3bb0de\">They</font> were laughing.","<font color=\"#3bb0de\">John</font> played.","I read a <font color=\"#3bb0de\">book</font>.","She bought <font color=\"#3bb0de\">fruits</font>.","A <font color=\"#3bb0de\">wonderful</font> old clock."]
                 },
                 {
                     "instructions": qsTr("Place the REFLEXIVE PRONOUNS to the right and others to the left"),
@@ -69,8 +100,8 @@ QtObject {
                     "maxNumberOfGood": 5,
                     "maxNumberOfBad": 4,
                     "prefix": "",
-                    "good": ["We painted the wall ourselves","Do your work yourself.","The door opened itself.","She saved herself.","They looked after themselves."],
-                    "bad": ["I have some friends.","Would you like some bread.","She ate all apples.","He did his job."]
+                    "good": ["We painted the wall <font color=\"#3bb0de\">ourselves</font>","Do your work <font color=\"#3bb0de\">yourself</font>.","The door opened <font color=\"#3bb0de\">itself</font>.","She saved <font color=\"#3bb0de\">herself</font>.","They looked after <font color=\"#3bb0de\">themselves</font>."],
+                    "bad": ["I have <font color=\"#3bb0de\">some</font> friends.","Would <font color=\"#3bb0de\">you</font> like some bread.","She <font color=\"#3bb0de\">ate</font> all apples.","<font color=\"#3bb0de\">He</font> did his job."]
                 },
                 {
                     "instructions": qsTr("Place the REFLEXIVE PRONOUNS to the right and others to the left"),
@@ -78,8 +109,8 @@ QtObject {
                     "maxNumberOfGood": 3,
                     "maxNumberOfBad": 3,
                     "prefix": "",
-                    "good": ["We blamed ourselves.","Did you hurt herself.","They looked after themselves."],
-                    "bad": ["He writes properly.","He didn't drink milk.","We studied maths."]
+                    "good": ["We blamed <font color=\"#3bb0de\">ourselves</font>.","Did you hurt <font color=\"#3bb0de\">yourself?</font>","They looked after <font color=\"#3bb0de\">themselves</font>."],
+                    "bad": ["He <font color=\"#3bb0de\">writes</font> properly.","He didn't drink <font color=\"#3bb0de\">milk</font>.","<font color=\"#3bb0de\">We</font> studied maths."]
                 },
                 {
                     "instructions": qsTr("Place the POSSESIVE PRONOUNS to the right and others to the left"),
@@ -87,8 +118,8 @@ QtObject {
                     "maxNumberOfGood": 6,
                     "maxNumberOfBad": 6,
                     "prefix": "",
-                    "good": ["This is her birthday.","Its your ball.","This is my cat.","She bought her a dress.","He lost his watch.","The black dress is mine."],
-                    "bad": ["He writes properly."]
+                    "good": ["This is <font color=\"#3bb0de\">her</font> birthday.","Its <font color=\"#3bb0de\">your</font> ball.","This is <font color=\"#3bb0de\">my</font> cat.","She bought <font color=\"#3bb0de\">her</font> a dress.","He lost <font color=\"#3bb0de\">his</font> watch.","The black dress is <font color=\"#3bb0de\">mine</font>."],
+                    "bad": ["<font color=\"#3bb0de\">He</font> writes properly.","She <font color=\"#3bb0de\">cooks</font> well","I am a <font color=\"#3bb0de\">singer</font>","I <font color=\"#3bb0de\">lost</font> my book","<font color=\"#3bb0de\">They</font> gifted me a watch","I love <font color=\"#3bb0de\">swimming</font>"]
                 },
                 {
                     "instructions": qsTr("Place the POSSESIVE PRONOUNS to the right and others to the left"),
@@ -96,8 +127,8 @@ QtObject {
                     "maxNumberOfGood": 5,
                     "maxNumberOfBad": 4,
                     "prefix": "",
-                    "good": ["The bag is theirs.","I liked his singing.","Susan is a friend of mine.","His name was Alex.","Their eyes were paining."],
-                    "bad": ["He writes poems.","They play volleyball.","We cooked meal.","Its raining"]
+                    "good": ["The bag is <font color=\"#3bb0de\">theirs.</font>","I liked <font color=\"#3bb0de\">his</font> singing.","Susan is a friend of <font color=\"#3bb0de\">mine.</font>","<font color=\"#3bb0de\">His</font> name was Alex.","<font color=\"#3bb0de\">Their</font> eyes were paining."],
+                    "bad": ["<font color=\"#3bb0de\">He</font> writes poems.","<font color=\"#3bb0de\">They</font> play volleyball.","We <font color=\"#3bb0de\">cooked</font> meal.","Its raining <font color=\"#3bb0de\">outside.</font>"]
                 },
                 {
                     "instructions": qsTr("Place the POSSESIVE PRONOUNS to the right and others to the left"),
@@ -105,8 +136,8 @@ QtObject {
                     "maxNumberOfGood": 3,
                     "maxNumberOfBad": 3,
                     "prefix": "",
-                    "good": ["He took his pen.","The dog wagged his tail.","My car is bigger."],
-                    "bad": ["He loves nature.","They played well.","George is singing."]
+                    "good": ["He took <font color=\"#3bb0de\">his</font> pen.","The dog wagged <font color=\"#3bb0de\">his</font> tail.","<font color=\"#3bb0de\">My</font> car is bigger."],
+                    "bad": ["He loves <font color=\"#3bb0de\">nature</font>.","They <font color=\"#3bb0de\">played</font> well.","<font color=\"#3bb0de\">George</font> is singing."]
                 },
                 {
                     "instructions": qsTr("Place the DEMONSTRATIVE PRONOUNS to the right and others to the left"),
@@ -114,8 +145,8 @@ QtObject {
                     "maxNumberOfGood": 6,
                     "maxNumberOfBad": 6,
                     "prefix": "",
-                    "good": ["This tastes good.","That is beautiful.","That book is good.","I'll buy these.","Is this yours?","That is incorrect."],
-                    "bad": ["He was running.","I drank milk.","They complained.","We did well.","I did the work myself.","He brushes his teeth."]
+                    "good": ["<font color=\"#3bb0de\">This</font> tastes good.","<font color=\"#3bb0de\">That</font> is beautiful.","<font color=\"#3bb0de\">That</font> book is good.","I'll buy <font color=\"#3bb0de\">these</font>.","Is <font color=\"#3bb0de\">this</font> yours?","<font color=\"#3bb0de\">That</font> is incorrect."],
+                    "bad": ["He <font color=\"#3bb0de\">was</font> running.","<font color=\"#3bb0de\">I</font> drank milk.","They <font color=\"#3bb0de\">complained.</font>","We <font color=\"#3bb0de\">did</font> well.","I did the work <font color=\"#3bb0de\">myself</font>.","He brushes <font color=\"#3bb0de\">his</font> teeth."]
                 },
                 {
                     "instructions": qsTr("Place the DEMONSTRATIVE PRONOUNS to the right and others to the left"),
@@ -123,8 +154,8 @@ QtObject {
                     "maxNumberOfGood": 5,
                     "maxNumberOfBad": 4,
                     "prefix": "",
-                    "good": ["I wanted that.","Is that Jim?","I own those.","Did you see this?","I read this book."],
-                    "bad": ["He swims.","Ben writes beautifully.","They won the match.","We scored well in exams."]
+                    "good": ["I wanted <font color=\"#3bb0de\">that.</font>","Is <font color=\"#3bb0de\">that</font> Jim?","I own <font color=\"#3bb0de\">those.</font>","Did you see <font color=\"#3bb0de\">this</font>?","I read <font color=\"#3bb0de\">this</font> book."],
+                    "bad": ["He <font color=\"#3bb0de\">swims.</font>","Ben <font color=\"#3bb0de\">writes</font> beautifully.","<font color=\"#3bb0de\">They</font> won the match.","<font color=\"#3bb0de\">We</font> sco#3bb0de well in exams."]
                 },
                 {
                     "instructions": qsTr("Place the DEMONSTRATIVE PRONOUNS to the right and others to the left"),
@@ -132,8 +163,8 @@ QtObject {
                     "maxNumberOfGood": 3,
                     "maxNumberOfBad": 3,
                     "prefix": "",
-                    "good": ["These are blue pens.","This is an apple.","Those were my fruits."],
-                    "bad": ["They went home.","The red pen was mine.","I am sleeping."]
+                    "good": ["<font color=\"#3bb0de\">These</font> are blue pens.","<font color=\"#3bb0de\">This</font> is an apple.","<font color=\"#3bb0de\">Those</font> were my fruits."],
+                    "bad": ["<font color=\"#3bb0de\">They</font> went home.","The #3bb0de pen was <font color=\"#3bb0de\">mine.</font>","<font color=\"#3bb0de\">I</font> am sleeping."]
                 },
                 {
                     "instructions": qsTr("Place the INDEFINITE PRONOUNS to the right and others to the left"),
@@ -141,8 +172,8 @@ QtObject {
                     "maxNumberOfGood": 6,
                     "maxNumberOfBad": 6,
                     "prefix": "",
-                    "good": ["Somebody ate my sandwich.","None is interested.","Everyone played football.","Either choice has its advantages.","I don't know any of the answers.","Everything happens for a reason."],
-                    "bad": ["He lost his dog.","Jone likes listening music.","She is a dancer.","He speaks good English.","Mom has went to market.","I am cooking food."]
+                    "good": ["<font color=\"#3bb0de\">Somebody</font> ate my sandwich.","<font color=\"#3bb0de\">None</font> is interested.","<font color=\"#3bb0de\">Everyone</font> played football.","<font color=\"#3bb0de\">Either</font> choice has its advantages.","I don't know <font color=\"#3bb0de\">any</font> of the answers.","<font color=\"#3bb0de\">Everything</font> happens for a reason."],
+                    "bad": ["<font color=\"#3bb0de\">He</font> lost his dog.","Jone likes listening <font color=\"#3bb0de\">music.</font>","She <font color=\"#3bb0de\">is</font> a dancer.","He speaks <font color=\"#3bb0de\">good</font> English.","Mom has went to market.","<font color=\"#3bb0de\">I</font> am cooking food."]
                 },
                 {
                     "instructions": qsTr("Place the INDEFINITE PRONOUNS to the right and others to the left"),
@@ -150,8 +181,8 @@ QtObject {
                     "maxNumberOfGood": 5,
                     "maxNumberOfBad": 4,
                     "prefix": "",
-                    "good": ["Everybody enjoyed the concert.","Nobody came.","Anyone can play this game.","Very few came for the class.","All were late for the party."],
-                    "bad": ["Sun rises from east.","I drive car.","They lost their keys","He loves red color."]
+                    "good": ["<font color=\"#3bb0de\">Everybody</font> enjoyed the concert.","<font color=\"#3bb0de\">Nobody</font> came.","<font color=\"#3bb0de\">Anyone</font> can play this game.","<font color=\"#3bb0de\">Very few</font> came for the class.","<font color=\"#3bb0de\">All</font> were late for the party."],
+                    "bad": ["<font color=\"#3bb0de\">Sun</font> rises from east.","I <font color=\"#3bb0de\">drive</font> car.","They lost <font color=\"#3bb0de\">their</font> keys","He loves <font color=\"#3bb0de\">yellow</font> color."]
                 },
                 {
                     "instructions": qsTr("Place the INDEFINITE PRONOUNS to the right and others to the left"),
@@ -159,8 +190,8 @@ QtObject {
                     "maxNumberOfGood": 3,
                     "maxNumberOfBad": 3,
                     "prefix": "",
-                    "good": ["Everyone enjoyed the food.","Is anyone available today?","Few came to the wedding."],
-                    "bad": ["They won the contest.","An apple a day keeps doctor away.","We went on holidays."]
+                    "good": ["<font color=\"#3bb0de\">Everyone</font> enjoyed the food.","Is <font color=\"#3bb0de\">anyone</font> available today?","<font color=\"#3bb0de\">Few</font> came to the wedding."],
+                    "bad": ["<font color=\"#3bb0de\">They</font> won the contest.","<font color=\"#3bb0de\">An apple</font> a day keeps doctor away.","We went <font color=\"#3bb0de\">on</font> holidays."]
                 },
                 {
                     "instructions": qsTr("Place the RELATIVE PRONOUNS to the right and others to the left"),
@@ -168,8 +199,8 @@ QtObject {
                     "maxNumberOfGood": 6,
                     "maxNumberOfBad": 6,
                     "prefix": "",
-                    "good": ["The car which I drive is old","who","That's the dog who doesn't like me.","The man who I saw was a thief.","These are some books which I love.","This is the place where I ate lunch."],
-                    "bad": ["These are not my shoes.","Did you hear her poem?","Jim works slow.","I didn't go to the party.","I love pizza.","This is my computer."]
+                    "good": ["The <font color=\"#3bb0de\">car</font> which I drive is old","This is not the icecream<font color=\"#3bb0de\">that</font>I like.","That's the dog <font color=\"#3bb0de\">who</font> doesn't like me.","The man <font color=\"#3bb0de\">who</font> I saw was a thief.","<font color=\"#3bb0de\">These</font> are some books which I love.","<font color=\"#3bb0de\">This</font> is the place where I ate lunch."],
+                    "bad": ["These are not <font color=\"#3bb0de\">my</font> shoes.","<font color=\"#3bb0de\">Did</font> you hear her poem?","<font color=\"#3bb0de\">Jim</font> works slow.","I didn't <font color=\"#3bb0de\">go</font> to the party.","<font color=\"#3bb0de\">I</font> love pizza.","<font color=\"#3bb0de\">This</font> is my computer."]
                 },
                 {
                     "instructions": qsTr("Place the RELATIVE PRONOUNS to the right and others to the left"),
@@ -177,17 +208,17 @@ QtObject {
                     "maxNumberOfGood": 5,
                     "maxNumberOfBad": 4,
                     "prefix": "",
-                    "good": ["The car which hit me was yellow.","The car that I drive is old.","This is the cake that I baked.","I will open whichever package arrives fast.","The person who called me is my best friend."],
-                    "bad": ["His shoes are dirty.","He drives slow.","I complted my work myself.","The class passed the test."]
+                    "good": ["The car <font color=\"#3bb0de\">which</font> hit me was yellow.","The car <font color=\"#3bb0de\">that</font> I drive is old.","<font color=\"#3bb0de\">This</font> is the cake that I baked.","I will open <font color=\"#3bb0de\">whichever</font> package arrives fast.","The person <font color=\"#3bb0de\">who</font> called me is my best friend."],
+                    "bad": ["His <font color=\"#3bb0de\">shoes</font> are dirty.","<font color=\"#3bb0de\">He</font> drives slow.","I completed my work <font color=\"#3bb0de\">myself.</font>","The <font color=\"#3bb0de\">class</font> passed the test."]
                 },
                 {
                     "instructions": qsTr("Place the RELATIVE PRONOUNS to the right and others to the left"),
                     "image": "Relative pronouns",
-                    "maxNumberOfGood": 3,
-                    "maxNumberOfBad": 3,
+                    "maxNumberOfGood": 2,
+                    "maxNumberOfBad": 4,
                     "prefix": "",
-                    "good": ["Katie, who is very kind is my friend","Whoever spilled the milk will have to clean it."],
-                    "bad": ["It was sunny.","She went to the doctor.","That's my umbrella.","I bought a new dog."]
+                    "good": ["Katie, <font color=\"#3bb0de\">who</font> is very kind is my friend","<font color=\"#3bb0de\">Whoever</font> spilled the milk will have to clean it."],
+                    "bad": ["<font color=\"#3bb0de\">It</font> was sunny.","She went to the <font color=\"#3bb0de\">doctor.</font>","That's my <font color=\"#3bb0de\">umbrella.</font>","I bought a <font color=\"#3bb0de\">new</font> dog."]
                 },
                 {
                     "instructions": qsTr("Place the INTERROGATIVE PRONOUNS to the right and others to the left"),
@@ -195,8 +226,8 @@ QtObject {
                     "maxNumberOfGood": 5,
                     "maxNumberOfBad": 7,
                     "prefix": "",
-                    "good": ["Who will design the logo?","Whose pen is it?","What will you do there?","Whom did you ask the details?","Which place is it?"],
-                    "bad": ["I play guitar.","They like watching movies.","He topped the class.","Sun sets in the west.","Exercises keep fit.","Phil is a good boy.","Diana is my best friend."]
+                    "good": ["<font color=\"#3bb0de\">Who</font> will design the logo?","<font color=\"#3bb0de\">Whose</font> pen is it?","<font color=\"#3bb0de\">What</font> will you do there?","<font color=\"#3bb0de\">Whom</font> did you ask the details?","<font color=\"#3bb0de\">Which</font> place is it?"],
+                    "bad": ["<font color=\"#3bb0de\">I</font> play guitar.","They like <font color=\"#3bb0de\">watching</font> movies.","<font color=\"#3bb0de\">He</font> topped the class.","<font color=\"#3bb0de\">Sun</font> sets in the west.","Exercises keep fit.","<font color=\"#3bb0de\">Phil</font> is a good boy.","<font color=\"#3bb0de\">Diana</font> is my best friend."]
                 },
                 {
                     "instructions": qsTr("Place the INTERROGATIVE PRONOUNS to the right and others to the left"),
@@ -204,8 +235,8 @@ QtObject {
                     "maxNumberOfGood": 5,
                     "maxNumberOfBad": 4,
                     "prefix": "",
-                    "good": ["Which is your favorite color?","Whose pen is this?","What is your name?","What are you talking about?","Whose camera is this?"],
-                    "bad": ["I play alone.","This is my book.","They played well.","I am going."]
+                    "good": ["<font color=\"#3bb0de\">Which</font> is your favorite color?","<font color=\"#3bb0de\">Whose</font> pen is this?","<font color=\"#3bb0de\">What</font> is your name?","<font color=\"#3bb0de\">What</font> are you talking about?","<font color=\"#3bb0de\">Whose</font> camera is this?"],
+                    "bad": ["I play <font color=\"#3bb0de\">alone.</font>","<font color=\"#3bb0de\">This</font> is my book.","<font color=\"#3bb0de\">They</font> played well.","I <font color=\"#3bb0de\">am going.</font>"]
                 },
                 {
                     "instructions": qsTr("Place the INTERROGATIVE PRONOUNS to the right and others to the left"),
@@ -213,8 +244,8 @@ QtObject {
                     "maxNumberOfGood": 5,
                     "maxNumberOfBad": 7,
                     "prefix": "",
-                    "good": ["Who won the race?","Whom shall we ask?","Which of these do you prefer?"],
-                    "bad": ["He went to the stadium.","Do you play?","She is dancing."]
+                    "good": ["<font color=\"#3bb0de\">Who</font> won the race?","<font color=\"#3bb0de\">Whom</font> shall we ask?","<font color=\"#3bb0de\">Which</font> of these do you prefer?"],
+                    "bad": ["He went to the <font color=\"#3bb0de\">stadium.</font>","Do <font color=\"#3bb0de\">you</font> play?","<font color=\"#3bb0de\">She</font> is dancing."]
                 }
             ]
         }

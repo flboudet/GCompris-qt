@@ -86,7 +86,6 @@ function addPropertiesToCategories(categories) {
 function categoriesToSavedProperties() {
     var props = {}
     for(var i = 0; i < items.menuModel.count; i++) {
-        var category = items.menuModel.get(i)
         props[category.name] = {
             'favorite': category['favorite']
         }
@@ -198,6 +197,10 @@ function allPlaced() {
 function getCategoryLevels() {
     var randomGood = 0;
     var randomBad = 0;
+    
+    items.categoryTitle = items.menuModel.get(index).name
+    items.categoryLesson = items.menuModel.get(index).categoryLesson ? items.menuModel.get(index).categoryLesson : '' 
+    items.hintDisplay = (items.categoryLesson == '') ? false : true
     items.categoryReview.middleZone.clear()
     /* If easy or medium mode is selected, store the details of levels of category of that respective index in items.details. */
     if(items.mode !== "expert") {
@@ -258,6 +261,7 @@ function getCategoryModel(dataset) {
         categories.push({
                             'name': dataset[c].levels[0].name,
                             'image': dataset[c].levels[0].image,
+                            'categoryLesson': dataset[c].levels[0].categoryLesson,
                             'index': c
                         })
     }

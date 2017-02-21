@@ -41,8 +41,8 @@ Flow {
         model: zoneModel
         Item {
             id: item
-            width: type == "words" ? middleScreen.width * 0.92 : middleScreen.width * 0.32
-            height: type == "words" ? categoryBackground.height * 0.1 : categoryBackground.height * 0.2
+            width: (type == "words" && (items.hintDisplay == true)) ? middleScreen.width * 0.92 : middleScreen.width * 0.32
+            height: (type == "words" && (items.hintDisplay == true)) ? categoryBackground.height * 0.1 : categoryBackground.height * 0.2
             opacity: 1
             Rectangle {
                 id: wordBox

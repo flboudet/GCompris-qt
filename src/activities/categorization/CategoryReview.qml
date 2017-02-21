@@ -125,7 +125,7 @@ Item {
                 top: parent.top
                 topMargin: 0.05 * parent.height
                 bottom: categoryBackground.bottom
-                leftMargin: 0.04 * middleScreen.width
+                leftMargin: type == "words" ? 0.04 * middleScreen.width : 0.015 * middleScreen.width
             }
         }
 

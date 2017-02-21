@@ -39,14 +39,15 @@ ActivityBase {
     property string type: "images"
     property var categoriesCount
 
-    pageComponent: Image {
+    pageComponent: 
+    Image {
         id: background
         source: "qrc:/gcompris/src/activities/lang/resource/imageid-bg.svg"
         anchors.fill: parent
         sourceSize.width: parent.width
         signal start
         signal stop
-
+        
         property string locale: "system"
 
         property bool englishFallback: false
@@ -77,6 +78,10 @@ ActivityBase {
             property var details
             property alias file: file
             property alias locale: background.locale
+            property alias hintDialog: hintDialog
+            property var categoryTitle
+            property var categoryLesson
+            property bool hintDisplay
         }
 
         onStart: {
@@ -225,12 +230,21 @@ ActivityBase {
             id: dialogHelp
             onClose: home()
         }
+        
+        DialogBackground {
+           id: hintDialog
+            visible: false
+            title: items.categoryTitle ? items.categoryTitle : ''
+            textBody: items.categoryLesson ? items.categoryLesson : ''
+            onClose: home()
+        }
 
         Bar {
             id: bar
-            content: menuScreen.started ? withConfig : withoutConfig
+            content: menuScreen.started ? withConfig : (items.hintDisplay == true ? withoutConfigWithHint : withoutConfigWithoutHint)
             property BarEnumContent withConfig: BarEnumContent { value: help | home | config }
-            property BarEnumContent withoutConfig: BarEnumContent { value: home | level }
+            property BarEnumContent withoutConfigWithHint: BarEnumContent { value: home | level | hint }
+            property BarEnumContent withoutConfigWithoutHint: BarEnumContent { value: home | level }
             onPreviousLevelClicked: Activity.previousLevel()
             onNextLevelClicked: Activity.nextLevel()
             onHelpClicked: {
@@ -246,8 +260,11 @@ ActivityBase {
                 dialogActivityConfig.active = true
                 displayDialog(dialogActivityConfig)
             }
+            onHintClicked: {
+                displayDialog(hintDialog)
+            }
         }
-
+        
         Bonus {
             id: bonus
             Component.onCompleted: win.connect(Activity.nextLevel)
