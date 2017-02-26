@@ -28,33 +28,33 @@ QtObject {
             "categoryLesson": qsTr("A <b>pronoun</b> is a word which replaces other words to avoid repetition
 We can class them in different categories.<br>
 <b>1. Personal pronouns:</b> A personnal pronoun is a word which replaces a person or an object.<br>
-<b>Examples:</b><font color=\"#3bb0de\"> I</font> go to swim: In this sentence I replaces my self.<br>
-<font color=\"#3bb0de\">He</font> is intelligent: In this example He replaces a boy or a man adult.
-<br><font color=\"#3bb0de\">They</font> are tired: In this example they replaces several people.<br><b>
-2. Reflexive Pronouns:</b> A reflexive pronoun is used when the object of a sentence is the same as the subject.
-<br><b>Examples: </b>They cooked <font color=\"#3bb0de\"> themselves</font>. In this example themselves is a reflexive pronoun.<br>
-We did the job <font color=\"#3bb0de\"> ourselves</font>: In this example ourselves is a reflexive pronoun.<br>
-I bought the fruits <font color=\"#3bb0de\"> myself</font>: In this example myself is a reflexive pronoun.<br>
-3. <b>Possesive pronouns: </b>A possesive pronoun is a little word used to indicate possesion.<br>
-<b>Examples: </b>This book is <font color=\"#3bb0de\"> mine</font>: In this example mine indicates possesion to me.<br>
-Is this ball <font color=\"#3bb0de\"> yours</font>? : In this example yours is a possesive pronoun.<br>
-He lost <font color=\"#3bb0de\"> his</font> pen: In this example his is a possesive pronoun.<br>
+The <font color=\"#3bb0de\">blue</font> word is personal pronoun in these cases:<br><font color=\"#3bb0de\"> I</font> go to swim.<br>
+<font color=\"#3bb0de\">He</font> is intelligent.
+<br><font color=\"#3bb0de\">They</font> are tired:<br><br>
+<b>2. Reflexive Pronouns:</b> A reflexive pronoun is used when the object of a sentence is the same as the subject.
+<br>The <font color=\"#3bb0de\">blue</font> word is reflexive pronoun in these cases: <br>They cooked <font color=\"#3bb0de\"> themselves</font>.<br>
+We did the job <font color=\"#3bb0de\"> ourselves</font>.<br>
+I bought the fruits <font color=\"#3bb0de\"> myself</font>.<br><br>
+3. <b>Possessive pronouns: </b>A possessive pronoun is a little word used to indicate possesion.<br>
+The <font color=\"#3bb0de\">blue</font> word is possesive pronoun in these cases: <br>This book is <font color=\"#3bb0de\"> mine</font><br>
+Is this ball <font color=\"#3bb0de\"> yours</font>?<br>
+He lost <font color=\"#3bb0de\"> his</font> pen.<br><br>
 <b>4. Demonstrative pronouns: </b>A demonstrative pronoun points somebody or something in a phrase and replaces it.<br>
-<b>Examples:</b><font color=\"#3bb0de\"> This</font> is my book: In this example this is a demonstrative pronoun.<br>
-I ate <font color=\"#3bb0de\"> those</font> apples. In this example those is a demonstrative pronoun.<br>
-<font color=\"#3bb0de\"> That</font> place is far away. In this example that is a demonstrative pronoun.<br>
+The <font color=\"#3bb0de\">blue</font> word is demonstrative pronoun in these cases:<br><font color=\"#3bb0de\"> This</font> is my book.<br>
+I ate <font color=\"#3bb0de\"> those</font> apples.<br>
+<font color=\"#3bb0de\"> That</font> place is far away.<br><br>
 <b>5. Indefinite Pronouns: </b>A indefinite pronoun refers to non-specific beings, objects, or places.<br>
-<b>Examples: </b><font color=\"#3bb0de\"> Everyone</font> was late. In this example everyone is an indefinite pronoun.<br>
-<font color=\"#3bb0de\">Someone</font> stole my pen. In this example someone is an indefinite pronoun.<br>
-<font color=\"#3bb0de\">Either</font> will do. In this example either is an indefinite pronoun.<br>
+The <font color=\"#3bb0de\">blue</font> word is indefinite pronoun in these cases: <br><font color=\"#3bb0de\"> Everyone</font> was late.<br>
+<font color=\"#3bb0de\">Someone</font> stole my pen.<br>
+<font color=\"#3bb0de\">Either</font> will do.<br><br>
 <b>6. Relative pronouns: </b>A relative pronoun is used to connect a relative clause to the main clause in a sentence.<br>
-<b>Examples: </b>I ate the fruits <font color=\"#3bb0de\">that</font> I bought yesterday. In this example that is a relative pronoun.<br>
-I am looking for someone <font color=\"#3bb0de\">who</font> can help me. In this example who is a relative pronoun.
-This is the park <font color=\"#3bb0de\">where</font> they will come. In this example where is a relative pronoun.<br>
+The <font color=\"#3bb0de\">blue</font> word is relative pronoun in these cases:<br>I ate the fruits <font color=\"#3bb0de\">that</font> I bought yesterday.<br>
+I am looking for someone <font color=\"#3bb0de\">who</font> can help me.<br>
+This is the park <font color=\"#3bb0de\">where</font> they will come.<br><br>
 <b>7.Interrogative pronoun:</b> A interrogative pronoun is a word which is used to ask a question.<br>
-<b>Examples: </b><font color=\"#3bb0de\">Whose</font> eraser is this. In this example whose is an interrogative pronoun.<br>
-<font color=\"#3bb0de\">Which</font> your favorite team. In this example which is used to ask a question.<br>
-<font color=\"#3bb0de\">Where</font> were you? In this example where is used to ask a question."
+The <font color=\"#3bb0de\">blue</font> word is interrogative pronoun in these cases: <br><font color=\"#3bb0de\">Whose</font> eraser is this?<br>
+<font color=\"#3bb0de\">Which</font> your favorite team?<br>
+<font color=\"#3bb0de\">Where</font> were you?"
             ),
             "image": imagesPrefix + "alphabets.jpg",
             "content": [
@@ -113,8 +113,8 @@ This is the park <font color=\"#3bb0de\">where</font> they will come. In this ex
                     "bad": ["He <font color=\"#3bb0de\">writes</font> properly.","He didn't drink <font color=\"#3bb0de\">milk</font>.","<font color=\"#3bb0de\">We</font> studied maths."]
                 },
                 {
-                    "instructions": qsTr("Place the POSSESIVE PRONOUNS to the right and others to the left"),
-                    "image": "Possesive Pronouns",
+                    "instructions": qsTr("Place the POSSESSIVE PRONOUNS to the right and others to the left"),
+                    "image": "Possessive Pronouns",
                     "maxNumberOfGood": 6,
                     "maxNumberOfBad": 6,
                     "prefix": "",
@@ -122,8 +122,8 @@ This is the park <font color=\"#3bb0de\">where</font> they will come. In this ex
                     "bad": ["<font color=\"#3bb0de\">He</font> writes properly.","She <font color=\"#3bb0de\">cooks</font> well","I am a <font color=\"#3bb0de\">singer</font>","I <font color=\"#3bb0de\">lost</font> my book","<font color=\"#3bb0de\">They</font> gifted me a watch","I love <font color=\"#3bb0de\">swimming</font>"]
                 },
                 {
-                    "instructions": qsTr("Place the POSSESIVE PRONOUNS to the right and others to the left"),
-                    "image": "Possesive Pronouns",
+                    "instructions": qsTr("Place the POSSESSIVE PRONOUNS to the right and others to the left"),
+                    "image": "Possessive Pronouns",
                     "maxNumberOfGood": 5,
                     "maxNumberOfBad": 4,
                     "prefix": "",
@@ -131,8 +131,8 @@ This is the park <font color=\"#3bb0de\">where</font> they will come. In this ex
                     "bad": ["<font color=\"#3bb0de\">He</font> writes poems.","<font color=\"#3bb0de\">They</font> play volleyball.","We <font color=\"#3bb0de\">cooked</font> meal.","Its raining <font color=\"#3bb0de\">outside.</font>"]
                 },
                 {
-                    "instructions": qsTr("Place the POSSESIVE PRONOUNS to the right and others to the left"),
-                    "image": "Possesive Pronouns",
+                    "instructions": qsTr("Place the POSSESSIVE PRONOUNS to the right and others to the left"),
+                    "image": "Possessive Pronouns",
                     "maxNumberOfGood": 3,
                     "maxNumberOfBad": 3,
                     "prefix": "",

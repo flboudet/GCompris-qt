@@ -125,6 +125,7 @@ Item {
                 top: parent.top
                 topMargin: 0.05 * parent.height
                 bottom: categoryBackground.bottom
+                bottomMargin: 0.05 * parent.height
                 leftMargin: type == "words" ? 0.04 * middleScreen.width : 0.015 * middleScreen.width
             }
         }
@@ -146,13 +147,13 @@ Item {
         Image {
             id: categoryImage
             source: items.details && items.details[bar.level-1] && items.details[bar.level-1].image && type == "images" ? items.details[bar.level-1].image : ""
-            width: horizontalLayout ? rightZone.width * 0.35 : rightZone.width * 0.35
-            height: horizontalLayout ? rightZone.height * 0.18 : rightZone.height * 0.15
+            width: horizontalLayout ? rightZone.contentWidth * 0.35 : rightZone.contentWidth * 0.35
+            height: horizontalLayout ? rightZone.contentHeight * 0.18 : rightZone.contentHeight * 0.15
             y: 0.015*parent.height
             visible: items.categoryImageChecked && type == "images"
             anchors {
                 left: middleScreen.right
-                leftMargin: 0.15 * rightZone.width
+                leftMargin: 0.15 * rightZone.contentWidth
             }
         }
 
@@ -160,11 +161,11 @@ Item {
             id: categoryTextBox
             color: "black"
             opacity: type == "words" ? 1 : 0
-            width: horizontalLayout ? rightZone.width * 0.35 : rightZone.width * 0.35
-            height: horizontalLayout ? rightZone.height * 0.18 : rightZone.height * 0.15
+            width: horizontalLayout ? rightZone.contentWidth * 0.35 : rightZone.contentWidth * 0.35
+            height: horizontalLayout ? rightZone.contentHeight * 0.18 : rightZone.contentHeight * 0.15
             anchors {
                 left: middleScreen.right
-                leftMargin: 0.15 * rightZone.width
+                leftMargin: 0.15 * rightZone.contentWidth
             }
             z: 3
             y: 0.015*parent.height
@@ -193,8 +194,8 @@ Item {
         BarButton {
             id: validate
             source: "qrc:/gcompris/src/core/resource/bar_ok.svg"
-            width: horizontalLayout ? rightZone.width * 0.20 : rightZone.width * 0.35
-            height: horizontalLayout ? rightZone.width * 0.20 : rightZone.width * 0.35
+            width: horizontalLayout ? rightZone.contentWidth * 0.20 : rightZone.contentWidth * 0.35
+            height: horizontalLayout ? rightZone.contentWidth * 0.20 : rightZone.contentWidth * 0.35
             y: parent.height*0.8
             z: 2
             anchors {

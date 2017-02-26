@@ -24,11 +24,20 @@ import GCompris 1.0
 import "../../core"
 import "categorization.js" as Activity
 
-Flow {
+Flickable {
+    id: scroll
+    contentWidth: zoneFlow.width
+    contentHeight: zoneFlow.height
+    flickableDirection: Flickable.VerticalFlick
+    property alias repeater: repeater
+    property alias model: zoneModel
+    property alias spacing: zoneFlow.spacing
+
+    Flow {
     id: zoneFlow
-    width: parent.width/3
-    height: parent.height
     spacing: 5
+    width: categoryBackground.width/3
+    height: categoryBackground.height
     property alias repeater: repeater
     property alias model: zoneModel
 
@@ -88,4 +97,5 @@ Flow {
             }
         }
     }
+}
 }
