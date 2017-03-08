@@ -26,7 +26,32 @@ QtObject {
         {
             "name": qsTr("Nouns"),
             "image": imagesPrefix + "alphabets.jpg",
-            "categoryLesson": qsTr("Hello"),
+            "categoryLesson": qsTr("A <b>noun</b> is a word which denotes person, place or thing.
+We can class them in different categories.<br>
+<b>1. Proper Nouns:</b> A proper noun is used for an individual person, place or orgization.<br>
+<font color=\"#3bb0de\">blue</font> word is a personal pronoun in these cases:<br><font color=\"#3bb0de\"> Cloe</font> plays football.<br>
+<font color=\"#3bb0de\">Dave</font> is honest.
+<br><font color=\"#3bb0de\">Nile</font> is the name of a river.<br><br>
+<b>2. Common Nouns:</b> A common noun refers to general people, place or things.
+<br>The <font color=\"#3bb0de\">blue</font> word is a common noun in these cases: <br>Their <font color=\"#3bb0de\">teacher</font>was absent.<br>
+<font color=\"#3bb0de\">Children</font> are playing outside.<br>
+<font color=\"#3bb0de\">Milk</font>is good for health.<br><br>
+<b>3. Countable nouns: </b>Countable nouns are people, places or things that can be counted.<br>
+The <font color=\"#3bb0de\">blue</font> word is a countable noun in these cases: <br>I ate a<font color=\"#3bb0de\"> sandwich</font>.<br>
+Is this <font color=\"#3bb0de\"> ball</font>yours?<br>
+I bought some<font color=\"#3bb0de\">apples</font>.<br><br>
+<b>4. Uncountable nouns: </b>Uncountable nouns are the things and substances that cannot be counted.<br>
+The <font color=\"#3bb0de\">blue</font> word is a uncountable noun in these cases:<br>I have some<font color=\"#3bb0de\">money</font>.<br>
+Do you like<font color=\"#3bb0de\"> rice</font>?<br>
+I like listening<font color=\"#3bb0de\">music</font>.<br><br>
+<b>5. Collective nouns: </b>A collective noun refers to collection of things taken as whole.<br>
+The <font color=\"#3bb0de\">blue</font> word is a collective noun in these cases: <br>The dogs gathered the<font color=\"#3bb0de\">flock</font> of sheep.<br>
+We bought our mother<font color=\"#3bb0de\">bouquet</font>of roses.<br>
+The<font color=\"#3bb0de\">Crowd</font>cheered the team.<br><br>
+<b>6. Abstract nouns: </b>Abstract nouns refer to an idea, quality or state.<br>
+The <font color=\"#3bb0de\">blue</font> word is a abstract noun in these cases:<br>I <font color=\"#3bb0de\">love</font> my parents.<br>
+We must never lose<font color=\"#3bb0de\">hope</font>.<br>
+Children have a lot of<font color=\"#3bb0de\">curiousity</font>.<br><br>"),
             "content": [
                 {
                     "instructions": qsTr("Place the PROPER NOUNS to the right and others to the left"),
@@ -169,7 +194,7 @@ QtObject {
                     "maxNumberOfGood": 5,
                     "maxNumberOfBad": 7,
                     "prefix": "",
-                    "good": ["I want to see <font color=\"#3bb0de\">justice</font> served.","We struck water at the <font color=\"#3bb0de\">depth</font> of twenty feet.","I want your <font color=\"#3bb0de\">goodwill.</font>","The <font color=\"#3bb0de\">length</font> of this road is just two miles.","<font color=\"#3bb0de\">Apprehension</font> is not good for health.."],
+                    "good": ["I want to see <font color=\"#3bb0de\">justice</font> served.","We struck water at the <font color=\"#3bb0de\">depth</font> of twenty feet.","I want your <font color=\"#3bb0de\">goodwill.</font>","The <font color=\"#3bb0de\">length</font> of this road is just two miles.","<font color=\"#3bb0de\">Apprehension</font> is not good for health."],
                     "bad": ["This is <font color=\"#3bb0de\">John</font> speaking.","<font color=\"#3bb0de\">Terry</font> is taller than me","He <font color=\"#3bb0de\">drives</font> carefully.","It's terribly <font color=\"#3bb0de\">hot.</font>","<font color=\"#3bb0de\">Where</font> is Greg?","The <font color=\"#3bb0de\">dog</font> ran.","He plays <font color=\"#3bb0de\">tennis</font> well."]
                 },
                 {

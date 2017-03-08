@@ -20,26 +20,51 @@
  */
 import QtQuick 2.1
 import GCompris 1.0
+import QtQuick.Controls 1.1
+import QtQuick.Controls.Styles 1.1
 
 import "../../core"
 import "categorization.js" as Activity
 
-Flickable {
+ScrollView {
     id: scroll
-    contentWidth: zoneFlow.width
-    contentHeight: zoneFlow.height
-    flickableDirection: Flickable.VerticalFlick
+    width: zoneFlow.width
+    height: zoneFlow.height
+//     visibleChildren: [image]
     property alias repeater: repeater
     property alias model: zoneModel
     property alias spacing: zoneFlow.spacing
-
+   horizontalScrollBarPolicy: Qt.ScrollBarAlwaysOff
+       style: ScrollViewStyle {
+        handle: Rectangle {
+            implicitWidth: middleScreen.width * 0.03
+            implicitHeight: middleScreen.height - items.bar.height
+            color: "#696969"
+        }
+        scrollBarBackground: Rectangle {
+            implicitWidth: middleScreen.width * 0.03
+            implicitHeight: middleScreen.height - items.bar.height
+            color: "#DCDCDC"
+        }
+        decrementControl: Image {
+            source: boardsUrl + "upArrow.svg"
+            width: middleScreen.width * 0.1
+            height: middleScreen.height * 0.05
+        }
+        incrementControl: Image {
+            source: boardsUrl + "downArrow.svg"
+            width: middleScreen.width * 0.1
+            height: middleScreen.height * 0.05
+        }
+    }
+    
     Flow {
     id: zoneFlow
     spacing: 5
     width: categoryBackground.width/3
     height: categoryBackground.height
-    property alias repeater: repeater
-    property alias model: zoneModel
+    opacity: 1
+//     property alias interactive: scroll.interactive
 
     ListModel {
         id: zoneModel
@@ -52,6 +77,7 @@ Flickable {
             id: item
             width: (type == "words" && (items.hintDisplay == true)) ? middleScreen.width * 0.92 : middleScreen.width * 0.32
             height: (type == "words" && (items.hintDisplay == true)) ? categoryBackground.height * 0.1 : categoryBackground.height * 0.2
+            visible: true
             opacity: 1
             Rectangle {
                 id: wordBox

@@ -52,8 +52,8 @@ QtObject {
                     "maxNumberOfGood": 3,
                     "maxNumberOfBad": 3,
                     "prefix": "",
-                    "good": ["I wake up.","We play basketball.","The cinema closes at 7pm."],
-                    "bad": ["He woke up.","I am going.","George was studying.","They went to the party"]
+                    "good": ["I drink milk daily.","Sun rises in the east.","I go for walk every morning."],
+                    "bad": ["We won the match.","I am listening music.","We cooked the meal"]
                 },
                 {
                     "instructions": qsTr("Place the PRESENT CONTINUOUS WORDS to the right and others to the left"),
@@ -62,7 +62,43 @@ QtObject {
                     "maxNumberOfBad": 6,
                     "prefix": "",
                     "good": ["I am going","He is playing","She is riding","I am loving","They are eating","He is sinking"],
-                    "bad": ["among","I live","We see","He saw","miss","She draws"]
+                    "bad": ["I went for a walk.","We play football.","She saw him.","Roger was busy.","Tim was the winner.","We ate the meal."]
+                },
+                {
+                    "instructions": qsTr("Place the PRESENT CONTINUOUS WORDS to the right and others to the left"),
+                    "image": "Present Continuous Tense",
+                    "maxNumberOfGood": 5,
+                    "maxNumberOfBad": 4,
+                    "prefix": "",
+                    "good": ["I am going to the market.","It is raining.","They are studying.","We are playing for 2 hours.","I am leaving work"],
+                    "bad": ["I have lost my keys.","She went shopping","I will help you.","This is my cat."]
+                },
+                {
+                    "instructions": qsTr("Place the PRESENT CONTINUOUS WORDS to the right and others to the left"),
+                    "image": "Present Continuous Tense",
+                    "maxNumberOfGood": 3,
+                    "maxNumberOfBad": 3,
+                    "prefix": "",
+                    "good": ["They are sleeping","He is always laughing.","What are you doing?"],
+                    "bad": ["He had been playing since morning.","It was a good day.","I love to read."]
+                },
+                {
+                    "instructions": qsTr("Place the PRESENT PERFECT WORDS to the right and others to the left"),
+                    "image": "Present Perfect Tense",
+                    "maxNumberOfGood": 6,
+                    "maxNumberOfBad": 6,
+                    "prefix": "",
+                    "good": ["He has gone","She has eaten","He has done","I have eaten","He has shown","He has slept"],
+                    "bad": ["I studying","between","He sits","stand","I am dreaming","above"]
+                },
+                {
+                    "instructions": qsTr("Place the PRESENT PERFECT WORDS to the right and others to the left"),
+                    "image": "Present Perfect Tense",
+                    "maxNumberOfGood": 6,
+                    "maxNumberOfBad": 6,
+                    "prefix": "",
+                    "good": ["He has gone","She has eaten","He has done","I have eaten","He has shown","He has slept"],
+                    "bad": ["I studying","between","He sits","stand","I am dreaming","above"]
                 },
                 {
                     "instructions": qsTr("Place the PRESENT PERFECT WORDS to the right and others to the left"),

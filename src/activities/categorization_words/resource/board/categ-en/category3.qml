@@ -25,17 +25,17 @@ QtObject {
     property variant levels: [
         {
             "name": qsTr("Pronouns"),
-            "categoryLesson": qsTr("A <b>pronoun</b> is a word which replaces other words to avoid repetition
+            "categoryLesson": qsTr("A <b>pronoun</b> is a word which replaces other words to avoid repetition.
 We can class them in different categories.<br>
 <b>1. Personal pronouns:</b> A personnal pronoun is a word which replaces a person or an object.<br>
 The <font color=\"#3bb0de\">blue</font> word is personal pronoun in these cases:<br><font color=\"#3bb0de\"> I</font> go to swim.<br>
 <font color=\"#3bb0de\">He</font> is intelligent.
-<br><font color=\"#3bb0de\">They</font> are tired:<br><br>
+<br><font color=\"#3bb0de\">They</font> are tired.<br><br>
 <b>2. Reflexive Pronouns:</b> A reflexive pronoun is used when the object of a sentence is the same as the subject.
 <br>The <font color=\"#3bb0de\">blue</font> word is reflexive pronoun in these cases: <br>They cooked <font color=\"#3bb0de\"> themselves</font>.<br>
 We did the job <font color=\"#3bb0de\"> ourselves</font>.<br>
 I bought the fruits <font color=\"#3bb0de\"> myself</font>.<br><br>
-3. <b>Possessive pronouns: </b>A possessive pronoun is a little word used to indicate possesion.<br>
+<b>3. Possessive pronouns: </b>A possessive pronoun is a little word used to indicate possesion.<br>
 The <font color=\"#3bb0de\">blue</font> word is possesive pronoun in these cases: <br>This book is <font color=\"#3bb0de\"> mine</font><br>
 Is this ball <font color=\"#3bb0de\"> yours</font>?<br>
 He lost <font color=\"#3bb0de\"> his</font> pen.<br><br>
@@ -64,7 +64,7 @@ The <font color=\"#3bb0de\">blue</font> word is interrogative pronoun in these c
                     "maxNumberOfGood": 6,
                     "maxNumberOfBad": 6,
                     "prefix": "",
-                    "good": ["<font color=\"#3bb0de\">I</font> study maths.","<font color=\"#3bb0de\">We</font> play football","<font color=\"#3bb0de\">Its</font> raining.","<font color=\"#3bb0de\">They</font> speak English.","<font color=\"#3bb0de\">She</font> is eating.","<font color=\"#3bb0de\">You</font> were sleeping."],
+                    "good": ["<font color=\"#3bb0de\">I</font> study maths.","<font color=\"#3bb0de\">We</font> play football","<font color=\"#3bb0de\">It</font> is raining.","<font color=\"#3bb0de\">They</font> speak English.","<font color=\"#3bb0de\">She</font> is eating.","<font color=\"#3bb0de\">You</font> were sleeping."],
                     "bad": ["<font color=\"#3bb0de\">Who</font> was reading?","<font color=\"#3bb0de\">Daniel</font> was playing.","<font color=\"#3bb0de\">George</font> went outside.","Do it <font color=\"#3bb0de\">yourself</font>.","The <font color=\"#3bb0de\">blue</font> car.","Some <font color=\"#3bb0de\">milk</font> is left."]
                 },
                 {
@@ -87,7 +87,7 @@ The <font color=\"#3bb0de\">blue</font> word is interrogative pronoun in these c
                 },
                 {
                     "instructions": qsTr("Place the REFLEXIVE PRONOUNS to the right and others to the left"),
-                    "image": "Reflexive Proouns",
+                    "image": "Reflexive Pronouns",
                     "maxNumberOfGood": 6,
                     "maxNumberOfBad": 6,
                     "prefix": "",

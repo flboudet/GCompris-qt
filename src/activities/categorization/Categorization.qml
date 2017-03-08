@@ -177,6 +177,7 @@ ActivityBase {
                         background: dialogActivityConfig
                         width: dialogActivityConfig.width
                         label: qsTr("Select your locale")
+                        visible: type == "words" ? true : false
                     }
                 }
             }
