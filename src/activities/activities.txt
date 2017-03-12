@@ -112,6 +112,7 @@ paintings
 penalty
 photo_hunter
 planegame
+play_rhythm
 readingh
 readingv
 redraw

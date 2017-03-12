@@ -1,0 +1,58 @@
+/* GCompris - play_rhythm.js
+ *
+ * Copyright (C) 2017 Utkarsh Tiwari <iamutkarshtiwari@gmail.com>
+ *
+ * Authors:
+ *   Beth Hadley <bethmhadley@gmail.com> (GTK+ version)
+ *   Utkarsh Tiwari <iamutkarshtiwari@gmail.com> (Qt Quick port)
+ *
+ *   This program is free software; you can redistribute it and/or modify
+ *   it under the terms of the GNU General Public License as published by
+ *   the Free Software Foundation; either version 3 of the License, or
+ *   (at your option) any later version.
+ *
+ *   This program is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *   GNU General Public License for more details.
+ *
+ *   You should have received a copy of the GNU General Public License
+ *   along with this program; if not, see <http://www.gnu.org/licenses/>.
+ */
+.pragma library
+.import QtQuick 2.0 as Quick
+
+var currentLevel = 1
+var numberOfLevel = 12
+var items
+var noteCount = 3
+var highlighter = ["note_highlight", "passed", "failed"]
+var url= "qrc:/gcompris/src/activities/play_rhythm/resource/";
+
+function start(items_) {
+    items = items_
+    currentLevel = 1
+    initLevel()
+}
+
+function stop() {
+}
+
+function initLevel() {
+    items.bar.level = currentLevel
+    items.background.source = url + 'background/' + (Math.floor(Math.random() * 6) + 1) + ".jpg"
+}
+
+function nextLevel() {
+    if(numberOfLevel <= ++currentLevel ) {
+        currentLevel = 1
+    }
+    initLevel();
+}
+
+function previousLevel() {
+    if(--currentLevel < 1) {
+        currentLevel = numberOfLevel
+    }
+    initLevel();
+}

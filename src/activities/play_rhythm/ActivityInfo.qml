@@ -1,6 +1,6 @@
 /* GCompris - ActivityInfo.qml
  *
- * Copyright (C) 2015 Your Name <yy@zz.org>
+ * Copyright (C) 2017 Utkarsh Tiwari <iamutkarshtiwari@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,7 +21,7 @@ ActivityInfo {
   name: "play_rhythm/PlayRhythm.qml"
   difficulty: 3
   icon: "play_rhythm/play_rhythm.svg"
-  author: "Beth Hadley &lt;bethmhadley@gmail.com&gt;"
+  author: "Utkarsh Tiwari &lt;iamutkarshtiwari@kde.org&gt;"
   demo: true
   title: qsTr("Play Rhythm")
   description: qsTr("Learn to listen to, read, and play musical rhythms.")
@@ -43,4 +43,5 @@ The following keyboard bindings work in this game:
 ")
   credit: ""
   section: "/discovery/sound_group"
+  createdInVersion: 8000
 }
