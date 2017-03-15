@@ -37,7 +37,7 @@ ActivityBase {
     pageComponent: Image {
         id: background
         anchors.fill: parent
-        source: Activity.url + "background/1.jpg"
+        source: Activity.url + "background/" + Activity.backgroundNumber +".jpg"
         width: activity.width
         height: activity.height
 
@@ -56,7 +56,13 @@ ActivityBase {
             property alias background: background
             property alias bar: bar
             property alias bonus: bonus
+            property alias drumArea: drumArea
+            property alias animateBar: animateBar
             property GCAudio audioEffects: activity.audioEffects
+            property bool wasPlayPressed: false
+            property int drumCount: 0
+            property bool isCorrect: true
+            property bool hasGameStarted: true
         }
 
         onStart: { Activity.start(items) }
@@ -70,6 +76,7 @@ ActivityBase {
             anchors {
                 left: parent.left
                 verticalCenter: parent.verticalCenter
+                leftMargin: width / 2
             }
             MouseArea {
                 id: metronomeArea
@@ -99,7 +106,7 @@ ActivityBase {
             }
         }
 
-
+        // Drum at the top
         Image {
             id: drum
             anchors.horizontalCenter: background.horizontalCenter
@@ -107,16 +114,23 @@ ActivityBase {
             source: Activity.url + 'drumhead.svg'
             width: background.width / 5
             height: background.height / 8
+            visible: (!animateBar.running || !items.wasPlayPressed) && !items.hasGameStarted && !clear.visible
 
             MouseArea {
                 id: drumArea
                 anchors.fill: drum
-                enabled: true
+                enabled: parent.visible
                 hoverEnabled: true
                 onClicked: {
-                    items.audioEffects.play(Activity.url + "sound/click.wav");
+                    items.wasPlayPressed = false;
                     if (!animateBar.running) {
+                        items.drumCount = 0;
+                        items.isCorrect = true;
                         animateBar.start();
+                    }
+                    if (items.drumCount < Activity.noteCount) {
+                        items.drumCount++;
+                        items.audioEffects.play(Activity.url + "sound/1.wav");
                     }
                 }
             }
@@ -156,6 +170,18 @@ ActivityBase {
                     left: parent.left
                     leftMargin: parent.width * 0.02
                     verticalCenter: parent.verticalCenter
+                }
+            }
+
+            Repeater {
+                model: Activity.noteCount
+                GCText {
+                    text: qsTr("1")
+                    color: 'black'
+                    fontSize: tinySize
+                    font.weight: Font.DemiBold
+                    anchors.verticalCenter: parent.verticalCenter
+                    x: (parent.width * 0.38) + ((parent.width / 6) * index)
                 }
             }
         }
@@ -204,15 +230,15 @@ ActivityBase {
                     visible: true
                 }
             }
-            // The movable bar
+            // The moving bar
             Rectangle {
                 id: movingBar
                 anchors.top: parent.top
-                x: trebleClef.width * 1.1
+                x: (parent.width * (1 / 3)) * 0.95
                 width: background.width * 0.006
                 height: background.height * 0.23
                 color: 'black'
-                visible: true
+                visible: animateBar.running
 
                 onXChanged: {
                     if (movingBar.x >= verticalBars.itemAt(1).x) {
@@ -223,11 +249,23 @@ ActivityBase {
                     id: animateBar
                     target: movingBar
                     properties: "x"
-                    from: trebleClef.width * 1.1
-                    to: notesArea.width
-                    duration: 3000
+                    from: (notesArea.width * (1 / 3)) * ((items.wasPlayPressed) ? 0.95 : 1)
+                    to: notesArea.width * 0.8
+                    duration: 4000
                     easing.type: Easing.Linear
                     loops: 1
+                    alwaysRunToEnd: true
+                    onStopped: {
+                        // Drum was used to start animation
+                        if (!items.wasPlayPressed) {
+                            if (items.isCorrect) {
+                                items.bonus.good("flower");
+                            } else {
+                                items.bonus.bad("flower");
+                                clear.visible = true;
+                            }
+                        }
+                    }
                 }
 
             }
@@ -246,7 +284,7 @@ ActivityBase {
                     ColorOverlay {
                         anchors.fill: note
                         source: note
-                        color: "#ff0000"
+                        color: "#22ff00"
                     }
 
                     // Highlight Image
@@ -257,11 +295,195 @@ ActivityBase {
                         width: note.width
                         height: note.height * 0.4
                         anchors.bottom: note.bottom
-                        visible: movingBar.x > note.x ? true : false
+                        visible: (items.drumCount >= (index + 1)) || (items.wasPlayPressed && movingBar.x >= note.x && movingBar.x <= (note.x + note.width)) ? true : false
+
+                        onVisibleChanged: {
+                            if (!items.wasPlayPressed) {
+                                if (movingBar.x >= note.x && movingBar.x <= (note.x + note.width)) {
+                                    // On pass
+                                    source = Activity.url + Activity.highlighter[1] + ".svg";
+                                } else {
+                                    // On fail
+                                    source = Activity.url + Activity.highlighter[2] + ".svg";
+                                    items.isCorrect = false;
+                                }
+                            } else {
+                                // On demo
+                                source = Activity.url + Activity.highlighter[0] + ".svg";
+                            }
+
+                            if (visible == true) {
+                                items.audioEffects.play(Activity.url + "sound/1.wav")
+                            }
+                        }
                     }
                 }
             }
         }
+
+        // Instruction message at the bottom of notes area
+        Rectangle {
+            id: bottomMessages
+            height: childrenRect.height
+            width: childrenRect.width * 1.08
+            color: "#80808070"
+            radius: height * 0.1
+            anchors {
+                top: notesArea.bottom
+                topMargin: notesArea.height * 0.1
+                horizontalCenter: background.horizontalCenter
+            }
+            border {
+                color: "black"
+                width: background.height * 0.005
+            }
+            GCText {
+                id: message
+                text: clear.visible ? qsTr("Click erase to try again.") : (animateBar.running || Activity.isRestarted) ? Activity.listenMsg : Activity.instructionMsg
+                color: 'black'
+                fontSize: tinySize
+                font.weight: Font.DemiBold
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                    verticalCenter: parent.verticalCenter
+                }
+            }
+        }
+
+        // Green play button at the game start
+        Rectangle {
+            id: startPlay
+            height: childrenRect.height
+            width: childrenRect.width * 1.08
+            color: "green"
+            visible: items.hasGameStarted
+            radius: height * 0.1
+            anchors {
+                top: bottomMessages.bottom
+                topMargin: notesArea.height * 0.1
+                horizontalCenter: background.horizontalCenter
+            }
+            border {
+                color: "black"
+                width: background.height * 0.005
+            }
+            MouseArea {
+                id: startPlayArea
+                enabled: true
+                hoverEnabled: true
+                anchors.fill: parent
+                onClicked: {
+                    items.hasGameStarted = false;
+                    items.wasPlayPressed = true;
+                    animateBar.start();
+                }
+            }
+            states: State {
+                name: "startPlayHover"
+                when: startPlayArea.containsMouse
+                PropertyChanges {
+                    target: startPlay
+                    scale: 1.1
+                }
+            }
+            GCText {
+                text: qsTr("I am Ready")
+                color: 'white'
+                fontSize: smallSize
+                font.weight: Font.DemiBold
+                anchors {
+                    horizontalCenter: parent.horizontalCenter
+                    verticalCenter: parent.verticalCenter
+                }
+            }
+        }
+
+        Rectangle {
+            id: rightButtons
+            anchors {
+                right: parent.right
+                verticalCenter: parent.verticalCenter
+                rightMargin: width / 6
+            }
+            width: parent.width / 6.5
+            height: parent.width / 10
+            color: "#80808070"
+            border {
+                color: 'black'
+                width: background.height * 0.01
+            }
+            radius: height * 0.1
+
+            Image {
+                id: play
+                source: Activity.url + "play.svg"
+                width: parent.width * 0.4
+                height: parent.height * 0.7
+                opacity: 1
+                anchors {
+                    verticalCenter: parent.verticalCenter
+                    left: parent.left
+                    leftMargin: width * 0.1
+                }
+                visible: drum.visible
+
+                MouseArea {
+                    id: playArea
+                    enabled: true
+                    hoverEnabled: true
+                    anchors.fill: parent
+                    onClicked: {
+                        items.wasPlayPressed = true;
+                        items.drumCount = 0;
+                        items.isCorrect = true;
+                        if (!animateBar.running) {
+                            animateBar.start();
+                        }
+                    }
+                }
+                states: State {
+                    name: "playHover"
+                    when: playArea.containsMouse
+                    PropertyChanges {
+                        target: play
+                        scale: 1.1
+                    }
+                }
+            }
+            Image {
+                id: clear
+                source: Activity.url + "edit-clear.svg"
+                width: parent.width * 0.4
+                height: parent.height * 0.7
+                opacity: 1
+                anchors {
+                    verticalCenter: parent.verticalCenter
+                    right: parent.right
+                    rightMargin: width * 0.1
+                }
+                visible: false
+
+                MouseArea {
+                    id: clearArea
+                    enabled: true
+                    hoverEnabled: true
+                    anchors.fill: parent
+                    onClicked: {
+                        clear.visible = false;
+                        Activity.resetLevel();
+                    }
+                }
+                states: State {
+                    name: "clearHover"
+                    when: clearArea.containsMouse
+                    PropertyChanges {
+                        target: clear
+                        scale: 1.1
+                    }
+                }
+            }
+        }
+
 
         DialogHelp {
             id: dialogHelp
@@ -281,7 +503,9 @@ ActivityBase {
 
         Bonus {
             id: bonus
-            Component.onCompleted: win.connect(Activity.nextLevel)
+            Component.onCompleted: {
+                win.connect(Activity.nextLevel)
+            }
         }
     }
 

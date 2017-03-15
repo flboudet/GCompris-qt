@@ -25,8 +25,12 @@
 var currentLevel = 1
 var numberOfLevel = 12
 var items
+var backgroundNumber = 1
+var isRestarted = false
 var noteCount = 3
 var highlighter = ["note_highlight", "passed", "failed"]
+var listenMsg = qsTr("Listen to the rhythm and follow the moving line.")
+var instructionMsg = qsTr("Click the drum to the tempo.\n Watch the vertical lien when you start");
 var url= "qrc:/gcompris/src/activities/play_rhythm/resource/";
 
 function start(items_) {
@@ -39,8 +43,17 @@ function stop() {
 }
 
 function initLevel() {
+    items.animateBar.stop();
     items.bar.level = currentLevel
-    items.background.source = url + 'background/' + (Math.floor(Math.random() * 6) + 1) + ".jpg"
+    items.drumCount = 0;
+    items.isCorrect = true;
+    items.wasPlayPressed = false;
+    if (!isRestarted) {
+        backgroundNumber = (Math.floor(Math.random() * 6) + 1)
+        items.background.source = url + 'background/' + backgroundNumber + ".jpg"
+    } else {
+        isRestarted = false;
+    }
 }
 
 function nextLevel() {
@@ -54,5 +67,10 @@ function previousLevel() {
     if(--currentLevel < 1) {
         currentLevel = numberOfLevel
     }
+    initLevel();
+}
+
+function resetLevel() {
+    isRestarted = true
     initLevel();
 }
