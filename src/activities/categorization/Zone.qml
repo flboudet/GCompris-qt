@@ -34,22 +34,26 @@ ScrollView {
     property alias repeater: repeater
     property alias model: zoneModel
     property alias spacing: zoneFlow.spacing
+
    horizontalScrollBarPolicy: Qt.ScrollBarAlwaysOff
        style: ScrollViewStyle {
         handle: Rectangle {
             implicitWidth: middleScreen.width * 0.03
             implicitHeight: middleScreen.height - items.bar.height
             color: "#696969"
+            visible: type == "words" ? true : false
         }
         scrollBarBackground: Rectangle {
             implicitWidth: middleScreen.width * 0.03
             implicitHeight: middleScreen.height - items.bar.height
             color: "#DCDCDC"
+            visible: type == "words" ? true : false
         }
         decrementControl: Image {
             source: boardsUrl + "upArrow.svg"
             width: middleScreen.width * 0.1
             height: middleScreen.height * 0.05
+            visible: type == "words" ? true : false
         }
         incrementControl: Image {
             source: boardsUrl + "downArrow.svg"
@@ -86,6 +90,7 @@ ScrollView {
                 width: parent.width
                 height: parent.height
                 z: 3
+                focus: true
                 radius: 10
                 border.width: 2
                 gradient: Gradient {

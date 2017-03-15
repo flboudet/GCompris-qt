@@ -186,7 +186,7 @@ ActivityBase {
                     items.mode = dataToSave["mode"]
                 if(dataToSave && dataToSave["displayUpdateDialogAtStart"])
                     items.displayUpdateDialogAtStart = (dataToSave["displayUpdateDialogAtStart"] == "true") ? true : false
-                if(dataToSave['locale']) {
+                if(dataToSave && dataToSave['locale']) {
                     background.locale = dataToSave["locale"];
                 }
             }
@@ -199,8 +199,7 @@ ActivityBase {
                 if(newLocale.indexOf('.') != -1) {
                     newLocale = newLocale.substring(0, newLocale.indexOf('.'))
                 }
-                dataToSave = {"locale": newLocale,
-                              "easyMode": "" + items.easyMode }
+                dataToSave = {"locale": newLocale}
 
                 background.locale = newLocale;
 

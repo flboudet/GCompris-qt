@@ -27,7 +27,7 @@ QtObject {
             "name": qsTr("Pronouns"),
             "categoryLesson": qsTr("A <b>pronoun</b> is a word which replaces other words to avoid repetition.
 We can class them in different categories.<br>
-<b>1. Personal pronouns:</b> A personnal pronoun is a word which replaces a person or an object.<br>
+<b>1. Personal pronouns:</b> A personal pronoun is a word which replaces a person or an object.<br>
 The <font color=\"#3bb0de\">blue</font> word is personal pronoun in these cases:<br><font color=\"#3bb0de\"> I</font> go to swim.<br>
 <font color=\"#3bb0de\">He</font> is intelligent.
 <br><font color=\"#3bb0de\">They</font> are tired.<br><br>
