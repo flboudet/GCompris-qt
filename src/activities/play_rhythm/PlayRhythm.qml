@@ -130,7 +130,8 @@ ActivityBase {
                     }
                     if (items.drumCount < Activity.noteCount) {
                         items.drumCount++;
-                        items.audioEffects.play(Activity.url + "sound/1.wav");
+                        drumSound.stop();
+                        drumSound.play(Activity.url + "sound/1.wav");
                     }
                 }
             }
@@ -141,6 +142,10 @@ ActivityBase {
                     target: drum
                     scale: 1.1
                 }
+            }
+            Audio {
+                id: drumSound
+                source: Activity.url +"sound/1.wav"
             }
         }
 
@@ -313,11 +318,16 @@ ActivityBase {
                             }
 
                             if (visible == true) {
-                                items.audioEffects.play(Activity.url + "sound/1.wav")
+                                notesSound.stop();
+                                notesSound.play(Activity.url + "sound/1.wav")
                             }
                         }
                     }
                 }
+            }
+            Audio {
+                id: notesSound
+                source: Activity.url +"sound/1.wav"
             }
         }
 
