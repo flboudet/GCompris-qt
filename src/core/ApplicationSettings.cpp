@@ -82,6 +82,7 @@ static const QString SECTION_VISIBLE = "sectionVisible";
 static const QString WORDSET = "wordset";
 
 static const QString PROGRESS_KEY = "progress";
+#define ACTIVATION_MODE "no"
 
 ApplicationSettings *ApplicationSettings::m_instance = NULL;
 
