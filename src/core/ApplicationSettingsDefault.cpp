@@ -33,6 +33,7 @@ void ApplicationSettings::checkPayment() {
 }
 
 uint ApplicationSettings::checkActivationCode(const QString &code) {
+#ifdef DISABLED
     if(code.length() != 12) {
         return 0;
     }
@@ -54,5 +55,7 @@ uint ApplicationSettings::checkActivationCode(const QString &code) {
     // Check date is under 2 years
     ok = year * 100 + month + 200 >= atoi(BUILD_DATE);
     return(ok ? 2 : 1);
+#endif
+    return 2;
 }
 
