@@ -10,6 +10,8 @@ project(gcompris-qt C CXX)
 set(CMAKE_INSTALL_UCRT_LIBRARIES 1)
 include(InstallRequiredSystemLibraries)
 
+find_package( PythonInterp )
+
 # Set c++11 support
 include(CheckCXXCompilerFlag)
 CHECK_CXX_COMPILER_FLAG("-std=c++11" COMPILER_SUPPORTS_CXX11)
@@ -192,7 +194,7 @@ include(cmake/rcc.cmake)
 # Simple command calling the python script
   add_custom_command(
     OUTPUT retrievePoFilesFromSvn
-    COMMAND python2 tools/l10n-fetch-po-files.py
+    COMMAND ${PYTHON_EXECUTABLE} tools/l10n-fetch-po-files.py
     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
     )
 # Install translations
