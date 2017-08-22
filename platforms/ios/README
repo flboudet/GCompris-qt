@@ -1,5 +1,12 @@
 iOS build instruction.
 
+Tools required to compile GCompris
+In addition to XCode, you will need to have the following tools installed on your mac:
+- QT
+- CMake
+- gettext
+- inkscape
+
 copy the following files at the root dir
 cp platforms/ios/config.h .
 cp platforms/ios/gcompris.pro .
