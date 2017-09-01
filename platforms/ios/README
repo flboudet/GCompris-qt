@@ -6,8 +6,19 @@ In addition to XCode, you will need to have the following tools installed on you
 - CMake
 - gettext
 - inkscape
+You must have them in your PATH before you can follow the instructions.
 
 Update config.h with the correct release version or pick it from a CMake build.
+update info.plist
+(TODO: do it with a script)
+
+Generate the MacOS version with CMake
+mkdir build_mac
+cmake -DQt5_DIR=/Users/flobo/Qt/5.9/clang_64/lib/cmake/Qt5
+make getSvnTranslations
+cmake ..
+make BuildTranslations
+make
 
 copy the following files at the root dir
 cp platforms/ios/config.h .
@@ -19,6 +30,10 @@ mkdir translations
 
 And fill copy the appropriate files in them.
 
+instead:
+cp -r build_mac/bin/gcompris-qt.app/Contents/Resources/rcc .
+cp -r build_mac/bin/gcompris-qt.app/Contents/Resources/translations .
+
 Create a build directory:
 mkdir build-ios
 cd build-ios
@@ -26,3 +41,6 @@ cd build-ios
 open gcompris.xcodeproj
 
 Fix the Launch reference to point the Launch item in the xcassets
+
+TODO :
+BOX2D
