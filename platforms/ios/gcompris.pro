@@ -3,7 +3,7 @@
 TEMPLATE = app
 TARGET = gcompris
 INCLUDEPATH += .
-QT += qml quick gui multimedia network xmlpatterns svg xml core
+QT += qml quick gui multimedia network xmlpatterns svg xml core sensors
 APPCERT = "3rd Party Mac Developer Application: Bruno Coudoin"
 INSTALLERCERT = "3rd Party Mac Developer Installer: Bruno Coudoin"
 BUNDLEID = net.gcompris
@@ -19,6 +19,7 @@ HEADERS += src/core/ActivityInfo.h \
            src/core/ActivityInfoTree.h \
            src/core/ApplicationInfo.h \
            src/core/ApplicationSettings.h \
+           src/core/Directory.h \
            src/core/DownloadManager.h \
            src/core/File.h
 SOURCES += src/core/ActivityInfo.cpp \
@@ -27,6 +28,7 @@ SOURCES += src/core/ActivityInfo.cpp \
            src/core/ApplicationInfo.cpp \
            src/core/ApplicationSettings.cpp \
            src/core/ApplicationSettingsDefault.cpp \
+           src/core/Directory.cpp \
            src/core/DownloadManager.cpp \
            src/core/File.cpp \
            src/core/main.cpp
