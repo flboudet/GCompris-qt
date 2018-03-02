@@ -8,6 +8,15 @@ In addition to XCode, you will need to have the following tools installed on you
 - inkscape
 You must have them in your PATH before you can follow the instructions.
 
+Build Box2D
+cd external/qml-box2d
+mkdir build-ios
+cd build-ios
+~/Qt/5.9/ios/bin/qmake ../box2d.pro
+make
+make install
+
+
 Update config.h with the correct release version or pick it from a CMake build.
 update info.plist
 (TODO: do it with a script)
@@ -19,6 +28,10 @@ make getSvnTranslations
 cmake ..
 make BuildTranslations
 make
+
+Generate the icons
+./createAppicon.py $PWD/Images.xcassets/AppIcon.appiconset $PWD/icon_no_corner.svg
+./createLaunchImage.py $PWD/Images.xcassets/LaunchImage.launchimage $PWD/../../src/activities/menu/resource/background.svg
 
 copy the following files at the root dir
 cp platforms/ios/config.h .
