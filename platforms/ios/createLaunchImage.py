@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 #
 # GCompris - createLaunchImage.py
 #
@@ -214,8 +214,8 @@ for image in images:
     content['images'].append(image)
 
     # Calc the cropping area
-    rw = source_width / width
-    rh = source_height / height
+    rw = float(source_width) / width
+    rh = float(source_height) / height
     r = min(rw, rh)
     width_final = int(width * r)
     height_final = int(height * r)
@@ -226,7 +226,7 @@ for image in images:
            str(area_y) + ':' + \
            str(area_x + width_final) + ':' + \
            str(area_y + height_final)
-
+    print width_final
     subprocess.call(["inkscape", image_source,
                       "-e", outdir + '/' + image['filename'],
                       "-a", area,
