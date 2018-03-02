@@ -419,7 +419,7 @@ else()
       set (_box2d_library_file "Box2D.dll")
     else()
       set (_box2d_library_dir "")
-      set (_box2d_library_file "libBox2D.so")
+      set (_box2d_library_file "${CMAKE_SHARED_LIBRARY_PREFIX}Box2D${CMAKE_SHARED_LIBRARY_SUFFIX}")
     endif()
     set (_box2d_install_dir ${CMAKE_CURRENT_BINARY_DIR}/lib/qml/Box2D.2.0)
     # make sure submodule is up2date
