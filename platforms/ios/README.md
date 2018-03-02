@@ -1,6 +1,6 @@
-iOS build instruction.
+# iOS build instruction.
 
-Tools required to compile GCompris
+## Tools required to compile GCompris
 In addition to XCode, you will need to have the following tools installed on your mac:
 - QT
 - CMake
@@ -8,31 +8,39 @@ In addition to XCode, you will need to have the following tools installed on you
 - inkscape
 You must have them in your PATH before you can follow the instructions.
 
-Build Box2D
+## Build Box2D
+```shell
 cd external/qml-box2d
 mkdir build-ios
 cd build-ios
 ~/Qt/5.9/ios/bin/qmake ../box2d.pro
 make
 make install
+```
 
-
+## Set the correct version number
 Update config.h with the correct release version or pick it from a CMake build.
 update info.plist
 (TODO: do it with a script)
 
+## Generate the resources and translations
 Generate the MacOS version with CMake
+```shell
 mkdir build_mac
 cmake -DQt5_DIR=/Users/flobo/Qt/5.9/clang_64/lib/cmake/Qt5
 make getSvnTranslations
 cmake ..
 make BuildTranslations
 make
+```
 
-Generate the icons
+## Generate the icons
+```shell
 ./createAppicon.py $PWD/Images.xcassets/AppIcon.appiconset $PWD/icon_no_corner.svg
 ./createLaunchImage.py $PWD/Images.xcassets/LaunchImage.launchimage $PWD/../../src/activities/menu/resource/background.svg
+```
 
+## Do other stuff
 copy the following files at the root dir
 cp platforms/ios/config.h .
 cp platforms/ios/gcompris.pro .
